@@ -1,28 +1,20 @@
 function mostrar()
 {
 
-	var contador;
-	var acumulador;
-	var numeroIngresado;
-
-	contador=0;
-	acumulador=0;
+	var contador=0;
+	var acumulador=0;
+	var numero;
 
 	while(contador<5)
 	{
-		contador=contador +1;
-		numeroIngresado=prompt("Ingrese numero");
-		numeroIngresado=parseInt(numeroIngresado);
-		acumulador=acumulador+ numeroIngresado;
+			numero=prompt("Ingrese un numero");
+			numero=parseInt(numero);
+			acumulador=acumulador+numero //el acumulador sirve para sumar.
+			contador++
 	}
-	//en la línea 18 el contador vale 5 pq llego al final de la función.
-	
-
-
-
-
+//los promedios y los porcentajes se calculan siempre afuera del while.
 
 document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/5;
+document.getElementById('promedio').value=acumulador/contador;
 
 }//FIN DE LA FUNCIÓN
